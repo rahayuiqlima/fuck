@@ -62,6 +62,7 @@ echo "0 0 * * * root xp" > /etc/crontab
 cd
 echo "1.3" > /home/ver
 clear
+sudo hostnamectl set-hostname SETUP-BY-THIRASTORE
 echo " Fix minor Bugs"
 echo " Now You Can Change Port Of Some Services"
 echo " Reboot 3 Sec"
