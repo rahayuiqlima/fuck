@@ -124,6 +124,6 @@ echo "-------------------------- Created By THIRASTORE -------------------------
 echo "================================================================================" | tee -a log-install.txt
 echo ""
 echo "	 Your VPS Will Be Automatical Reboot In 6 s"
-rm -f install.sh
+rm -f setup.sh
 sleep 6
 reboot
