@@ -16,7 +16,7 @@ date
 mkdir -p /etc/trojan/
 touch /etc/trojan/akun.conf
 # install v2ray
-wget https://raw.githubusercontent.com/Dork96/Final/main/go.sh && chmod +x go.sh && ./go.sh
+wget https://raw.githubusercontent.com/rezakojexs/fuck/main/go.sh && chmod +x go.sh && ./go.sh
 rm -f /root/go.sh
 bash -c "$(wget -O- https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)"
 mkdir /root/.acme.sh
@@ -491,19 +491,19 @@ systemctl enable trojan
 systemctl restart v2ray
 systemctl enable v2ray
 cd /usr/bin
-wget -O add-ws "https://raw.githubusercontent.com/Dork96/Final/main/add-ws.sh"
-wget -O add-vless "https://raw.githubusercontent.com/Dork96/Final/main/add-vless.sh"
-wget -O add-tr "https://raw.githubusercontent.com/Dork96/Final/main/add-tr.sh"
-wget -O del-ws "https://raw.githubusercontent.com/Dork96/Final/main/del-ws.sh"
-wget -O del-vless "https://raw.githubusercontent.com/Dork96/Finalo/main/del-vless.sh"
-wget -O del-tr "https://raw.githubusercontent.com/Dork96/Final/main/del-tr.sh"
-wget -O cek-ws "https://raw.githubusercontent.com/Dork96/Final/main/cek-ws.sh"
-wget -O cek-vless "https://raw.githubusercontent.com/Dork96/Final/main/cek-vless.sh"
-wget -O cek-tr "https://raw.githubusercontent.com/Dork96/Final/main/cek-tr.sh"
-wget -O renew-ws "https://raw.githubusercontent.com/Dork96/Final/main/renew-ws.sh"
-wget -O renew-vless "https://raw.githubusercontent.com/Dork96/Final/main/renew-vless.sh"
-wget -O renew-tr "https://raw.githubusercontent.com/Dork96/Final/main/renew-tr.sh"
-wget -O certv2ray "https://raw.githubusercontent.com/Dork96/Final/main/cert.sh"
+wget -O add-ws "https://raw.githubusercontent.com/rezakojexs/fuck/main/add-ws.sh"
+wget -O add-vless "https://raw.githubusercontent.com/rezakojexs/fuck/main/add-vless.sh"
+wget -O add-tr "https://raw.githubusercontent.com/rezakojexs/fuck/main/add-tr.sh"
+wget -O del-ws "https://raw.githubusercontent.com/rezakojexs/fuck/main/del-ws.sh"
+wget -O del-vless "https://raw.githubusercontent.com/rezakojexs/fuck/main/del-vless.sh"
+wget -O del-tr "https://raw.githubusercontent.com/rezakojexs/fuck/main/del-tr.sh"
+wget -O cek-ws "https://raw.githubusercontent.com/rezakojexs/fuck/main/cek-ws.sh"
+wget -O cek-vless "https://raw.githubusercontent.com/rezakojexs/fuck/main/cek-vless.sh"
+wget -O cek-tr "https://raw.githubusercontent.com/rezakojexs/fuck/main/cek-tr.sh"
+wget -O renew-ws "https://raw.githubusercontent.com/rezakojexs/fuck/main/renew-ws.sh"
+wget -O renew-vless "https://raw.githubusercontent.com/rezakojexs/fuck/main/renew-vless.sh"
+wget -O renew-tr "https://raw.githubusercontent.com/rezakojexs/fuck/main/renew-tr.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/rezakojexs/fuck/main/cert.sh"
 chmod +x add-ws
 chmod +x add-vless
 chmod +x add-tr
