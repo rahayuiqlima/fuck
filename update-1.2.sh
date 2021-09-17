@@ -62,10 +62,9 @@ echo "0 0 * * * root xp" > /etc/crontab
 cd
 echo "1.3" > /home/ver
 clear
-sudo hostnamectl set-hostname tes-sc-kojexs
+#sudo hostnamectl set-hostname tes-sc-kojexs
 echo " Fix minor Bugs"
 echo " Now You Can Change Port Of Some Services"
 echo " Reboot 3 Sec"
 sleep 3
-rm -f update.sh
 reboot
