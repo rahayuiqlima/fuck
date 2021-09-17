@@ -1,7 +1,7 @@
 #!/bin/bash
 curl https://rclone.org/install.sh | bash
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/Dork96/Final/main/rclone.conf"
+wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/rezakojexs/fuck/main/rclone.conf"
 git clone  https://github.com/magnific0/wondershaper.git
 cd wondershaper
 make install
@@ -26,11 +26,11 @@ logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "https://raw.githubusercontent.com/Dork96/Final/main/autobackup.sh"
-wget -O backup "https://raw.githubusercontent.com/Dork96/Final/main/backup.sh"
-wget -O restore "https://raw.githubusercontent.com/Dork96/Final/main/restore.sh"
-wget -O strt "https://raw.githubusercontent.com/Dork96/Final/main/strt.sh"
-wget -O speed-limiter "https://raw.githubusercontent.com/Dork96/Final/main/speed-limiter.sh"
+wget -O autobackup "https://raw.githubusercontent.com/rezakojexs/fuck/main/autobackup.sh"
+wget -O backup "https://raw.githubusercontent.com/rezakojexs/fuck/main/backup.sh"
+wget -O restore "https://raw.githubusercontent.com/rezakojexs/fuck/main/restore.sh"
+wget -O strt "https://raw.githubusercontent.com/rezakojexs/fuck/main/strt.sh"
+wget -O speed-limiter "https://raw.githubusercontent.com/rezakojexs/fuck/main/speed-limiter.sh"
 chmod +x autobackup
 chmod +x backup
 chmod +x restore
