@@ -20,7 +20,7 @@ commonname=www.wuzzzssh.xyz
 email=admin@wuzzzssh.xyz
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Dork96/Final/main/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/rezakojexs/fuck/main/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -82,7 +82,7 @@ apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rs
 #echo "clear" >> .profile
 #echo "neofetch" >> .profile
 # Admin Welcome
-wget -O /usr/bin/welcomeadmin "https://https://raw.githubusercontent.com/Dork96/Final/main/welcomeadmin.sh"
+wget -O /usr/bin/welcomeadmin "https://https://raw.githubusercontent.com/rezakojexs/fuck/main/welcomeadmin.sh"
 chmod +x /usr/bin/welcomeadmin
 echo "welcomeadmin" >> .profile
 rm -f /root/welcomeadmin
@@ -93,14 +93,14 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Dork96/Final/main/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/rezakojexs/fuck/main/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Dork96/Final/main/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/rezakojexs/fuck/main/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Dork96/Final/main/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/rezakojexs/fuck/main/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -130,7 +130,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Dork96/Final/main/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/rezakojexs/fuck/main/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -194,7 +194,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #OpenVPN
-wget https://raw.githubusercontent.com/Dork96/Final/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/rezakojexs/fuck/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -227,7 +227,7 @@ echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 # banner /etc/issue.net
-wget -O /etc/issue.net "https://raw.githubusercontent.com/Dork96/Final/main/banner.conf"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/rezakojexs/fuck/main/banner.conf"
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
@@ -251,13 +251,13 @@ netfilter-persistent reload
 #SSLH
 apt-get install sslh -y
 #Forward 443 = 109 = 567
-wget -O /etc/default/sslh "https://raw.githubusercontent.com/Dork96/DorkScript/main/sslh.conf"
+wget -O /etc/default/sslh "https://raw.githubusercontent.com/rezakojexs/masaiya/main/sslh.conf"
 service sslh restart
 
 #install webscket
 cd
 
-wget https://raw.githubusercontent.com/Dork96/DorkScript/main/websock.sh && chmod +x websock.sh && ./websock.sh
+wget https://raw.githubusercontent.com/rezakojexs/masaiya/main/websock.sh && chmod +x websock.sh && ./websock.sh
 rm -f /root/key.pem
 rm -f /root/cert.pem
 rm -f /root/websock.sh
@@ -267,45 +267,45 @@ echo -e "Installed Websocket Success..."
 
 # download script
 cd /usr/bin
-wget -O add-host "https://raw.githubusercontent.com/Dork96/Final/main/add-host.sh"
-wget -O about "https://raw.githubusercontent.com/Dork96/Final/main/about.sh"
-wget -O menu "https://raw.githubusercontent.com/Dork96/Final/main/menu.sh"
-wget -O add-ssh "https://raw.githubusercontent.com/Dork96/Final/main/add-ssh.sh"
-wget -O trial-ssh "https://raw.githubusercontent.com/Dork96/Final/main/trial-ssh.sh"
-wget -O del-ssh "https://raw.githubusercontent.com/Dork96/Final/main/del-ssh.sh"
-wget -O list-ssh "https://raw.githubusercontent.com/Dork96/Final/main/list-ssh.sh"
-wget -O delete "https://raw.githubusercontent.com/Dork96/Final/main/delete.sh"
-wget -O cek-ssh "https://raw.githubusercontent.com/Dork96/Final/main/cek-ssh.sh"
-wget -O restart "https://raw.githubusercontent.com/Dork96/Final/main/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/Dork96/Final/main/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/Dork96/Final/main/info.sh"
-wget -O ram "https://raw.githubusercontent.com/Dork96/Final/main/ram.sh"
-wget -O renew-ssh "https://raw.githubusercontent.com/Dork96/Final/main/renew-ssh.sh"
-wget -O autokill "https://raw.githubusercontent.com/Dork96/Final/main/autokill.sh"
-wget -O mulog "https://raw.githubusercontent.com/Dork96/Final/main/mulog.sh"
-wget -O tendang "https://raw.githubusercontent.com/Dork96/Final/main/tendang.sh"
-wget -O change-port "https://raw.githubusercontent.com/Dork96/Final/main/change.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/Dork96/Final/main/port-ovpn.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/Dork96/Final/main/port-ssl.sh"
-wget -O port-wg "https://raw.githubusercontent.com/Dork96/Final/main/port-wg.sh"
-wget -O port-tr "https://raw.githubusercontent.com/Dork96/Final/main/port-tr.sh"
-wget -O port-sstp "https://raw.githubusercontent.com/Dork96/Final/main/port-sstp.sh"
-wget -O port-squid "https://raw.githubusercontent.com/Dork96/Final/main/port-squid.sh"
-wget -O port-ws "https://raw.githubusercontent.com/Dork96/Final/main/port-ws.sh"
-wget -O port-vless "https://raw.githubusercontent.com/Dork96/Final/main/port-vless.sh"
-wget -O webmin "https://raw.githubusercontent.com/Dork96/Final/main/webmin.sh"
-wget -O xp "https://raw.githubusercontent.com/Dork96/Final/main/xp.sh"
-wget -O kernel-up "https://raw.githubusercontent.com/Dork96/Final/main/kernel.sh"
-wget -O update "https://raw.githubusercontent.com/Dork96/Final/main/update-1.2.sh"
-wget -O auto-reboot "https://raw.githubusercontent.com/Dork96/Final/main/reboot.sh"
+wget -O add-host "https://raw.githubusercontent.com/rezakojexs/fuck/main/add-host.sh"
+wget -O about "https://raw.githubusercontent.com/rezakojexs/fuck/main/about.sh"
+wget -O menu "https://raw.githubusercontent.com/rezakojexs/fuck/main/menu.sh"
+wget -O add-ssh "https://raw.githubusercontent.com/rezakojexs/fuck/main/add-ssh.sh"
+wget -O trial-ssh "https://raw.githubusercontent.com/rezakojexs/fuck/main/trial-ssh.sh"
+wget -O del-ssh "https://raw.githubusercontent.com/rezakojexs/fuck/main/del-ssh.sh"
+wget -O list-ssh "https://raw.githubusercontent.com/rezakojexs/fuck/main/list-ssh.sh"
+wget -O delete "https://raw.githubusercontent.com/rezakojexs/fuck/main/delete.sh"
+wget -O cek-ssh "https://raw.githubusercontent.com/rezakojexs/fuck/main/cek-ssh.sh"
+wget -O restart "https://raw.githubusercontent.com/rezakojexs/fuck/main/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/rezakojexs/fuck/main/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/rezakojexs/fuck/main/info.sh"
+wget -O ram "https://raw.githubusercontent.com/rezakojexs/fuck/main/ram.sh"
+wget -O renew-ssh "https://raw.githubusercontent.com/rezakojexs/fuck/main/renew-ssh.sh"
+wget -O autokill "https://raw.githubusercontent.com/rezakojexs/fuck/main/autokill.sh"
+wget -O mulog "https://raw.githubusercontent.com/rezakojexs/fuck/main/mulog.sh"
+wget -O tendang "https://raw.githubusercontent.com/rezakojexs/fuck/main/tendang.sh"
+wget -O change-port "https://raw.githubusercontent.com/rezakojexs/fuck/main/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/rezakojexs/fuck/main/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/rezakojexs/fuck/main/port-ssl.sh"
+wget -O port-wg "https://raw.githubusercontent.com/rezakojexs/fuck/main/port-wg.sh"
+wget -O port-tr "https://raw.githubusercontent.com/rezakojexs/fuck/main/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/rezakojexs/fuck/main/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/rezakojexs/fuck/main/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/rezakojexs/fuck/main/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/rezakojexs/fuck/main/port-vless.sh"
+wget -O webmin "https://raw.githubusercontent.com/rezakojexs/fuck/main/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/rezakojexs/fuck/main/xp.sh"
+wget -O kernel-up "https://raw.githubusercontent.com/rezakojexs/fuck/main/kernel.sh"
+wget -O update "https://raw.githubusercontent.com/rezakojexs/fuck/main/update-1.2.sh"
+wget -O auto-reboot "https://raw.githubusercontent.com/rezakojexs/fuck/main/reboot.sh"
 
-wget -O menu-l2tp "https://raw.githubusercontent.com/Dork96/Final/main/menu-l2tp.sh"
-wget -O menu-ssh "https://raw.githubusercontent.com/Dork96/Final/main/menu-ssh.sh"
-wget -O menu-system "https://raw.githubusercontent.com/Dork96/Final/main/menu-system.sh"
-wget -O menu-tr "https://raw.githubusercontent.com/Dork96/Final/main/menu-tr.sh"
-wget -O menu-v2ray "https://raw.githubusercontent.com/Dork96/Final/main/menu-v2ray.sh"
-wget -O menu-wr "https://raw.githubusercontent.com/Dork96/Final/main/menu-wr.sh"
-wget -O izin "https://raw.githubusercontent.com/Dork96/Final/main/izin.sh"
+wget -O menu-l2tp "https://raw.githubusercontent.com/rezakojexs/fuck/main/menu-l2tp.sh"
+wget -O menu-ssh "https://raw.githubusercontent.com/rezakojexs/fuck/main/menu-ssh.sh"
+wget -O menu-system "https://raw.githubusercontent.com/rezakojexs/fuck/main/menu-system.sh"
+wget -O menu-tr "https://raw.githubusercontent.com/rezakojexs/fuck/main/menu-tr.sh"
+wget -O menu-v2ray "https://raw.githubusercontent.com/rezakojexs/fuck/main/menu-v2ray.sh"
+wget -O menu-wr "https://raw.githubusercontent.com/rezakojexs/fuck/main/menu-wr.sh"
+wget -O izin "https://raw.githubusercontent.com/rezakojexs/fuck/main/izin.sh"
 
 chmod +x add-host
 chmod +x menu
