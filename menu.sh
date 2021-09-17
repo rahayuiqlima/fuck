@@ -3,8 +3,18 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- https://icanhazip.com);
+IZIN=$(curl https://raw.githubusercontent.com/rezakojexs/fuck/main/ipvps | grep $MYIP)
 echo "Checking VPS"
-izin
+if [ $MYIP = $IZIN ]; then
+echo -e "${green}Permission Accepted...${NC}"
+else
+echo -e "${red}Permission Denied!${NC}";
+echo "Please Contact Admin"| lolcat
+echo "Telegram : t.me/Kotak16"
+echo "Whatsapp : wa.me/628976118568"
+exit 0
+fi
+
 clear
 COUNTRY=$(curl -s ipinfo.io/country )
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
