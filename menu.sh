@@ -8,6 +8,8 @@ echo "Checking VPS"
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
+clear
+
 echo -e "${red}Permission Denied!${NC}";
 echo "Please Contact Admin"| lolcat
 echo "Telegram : t.me/Kotak16"
