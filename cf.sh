@@ -8,7 +8,7 @@ MYIP=$(wget -qO- https://icanhazip.com);
 echo "Checking VPS"
 apt install jq curl -y
 DOMAIN=kojexs.me
-sub=$(</dev/urandom tr -dc 0-9 | head -c4)
+sub=$(</dev/urandom tr -dc 0-9 | head -c2)
 SUB_DOMAIN=script${sub}.kojexs.me
 WILDCARD=*.${sub}.kojexs.me
 CF_ID=crackdawn16@gmail.com
