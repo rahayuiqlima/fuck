@@ -11,12 +11,18 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com);
-echo "Checking VPS"
+#echo "Checking VPS"
 IZIN=$( curl https://raw.githubusercontent.com/rezakojexs/fuck/main/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
-echo -e "${green}Permission Accepted...${NC}"
+echo -e "${green}Permintaan Diterima...${NC}"
 else
-echo -e "${green}Permission Accepted...${NC}"
+echo -e "${red}Permintaan Ditolak!${NC}";
+echo "Hanya untuk pengguna terdaftar"
+echo "Please Contact Admin"
+echo "Telegram t.me/kotak16"
+echo "WhatsApp wa.me/6285776916806"
+rm -f setup.sh
+exit 0
 fi
 mkdir /etc/v2ray
 mkdir /var/lib/premium-script;
