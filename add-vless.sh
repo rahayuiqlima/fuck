@@ -32,7 +32,7 @@ sed -i '/#tls$/a\### '"$user $exp"'\
 sed -i '/#none$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/v2ray/vnone.json
 vlesslink1="vless://${uuid}@${domain}:$tls?path=/v2ray&security=tls&encryption=none&type=ws#${user}"
-vlesslink2="vless://${uuid}@your_bug.com:$none?host=${domain}&path=/v2ray&encryption=none&type=ws#${user}"
+vlesslink2="vless://${uuid}@104.17.2.81:$none?host=${domain}&path=/v2ray&encryption=none&type=ws#${user}"
 systemctl restart v2ray@vless
 systemctl restart v2ray@vnone
 clear
