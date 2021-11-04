@@ -50,7 +50,7 @@ cat>/etc/v2ray/$user-none.json<<EOF
       {
       "v": "2",
       "ps": "${user}",
-      "add": "your_bug.com",
+      "add": "104.17.2.81",
       "port": "${none}",
       "id": "${uuid}",
       "aid": "2",
