@@ -2,4 +2,4 @@
 
 clear
 neofetch
-echo "Script By THIRASTORE"
+echo "Script By KOJEXS"
